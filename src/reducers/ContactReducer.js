@@ -2,12 +2,14 @@
 const initialState = [
     {
         id:0,
-        name:'Alejandro Gimeno Ataz',
+        name:'Alejandro Mathews',
+        email:'alexmail@mail.com',
         age:28
     },
     {
         id:1,
-        name:'Diana Garcia Orti',
+        name:'Tiana Doe',
+        email:'TDoe@mail.com',
         age:31
     }
 ];
