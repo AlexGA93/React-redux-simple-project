@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
+import {BrowserRouter as Router} from 'react-router-dom';
+import Routes from './components/Routes/routes';
+
+import { ToastContainer } from 'react-toastify';
+
+import Navbar from './components/Navbar/Navbar';
+
+import {Provider} from 'react-redux';
+//redux store
+import store from './store';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router className="App">
+        <ToastContainer />
+        <Navbar />
+        <Routes />
+      </Router>
+    </Provider>
   );
 }
 
